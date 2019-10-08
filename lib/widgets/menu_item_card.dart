@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ss_menu/constants.dart';
+import 'package:ss_menu/models/menu_item.dart';
 
 class MenuItemCard extends StatelessWidget {
+  final MenuItem item;
+
   MenuItemCard({
     Key key,
+    @required this.item,
   }) : super(key: key);
 
   @override
@@ -25,7 +29,7 @@ class MenuItemCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'Tasty Haha',
+                    item.name,
                     textAlign: TextAlign.start,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -33,7 +37,7 @@ class MenuItemCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '₹ 40',
+                    '₹ ${this.item.price.toString()}',
                     textAlign: TextAlign.start,
                     style: TextStyle(
                       fontSize: 14.0,

@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:ss_menu/data/outlets.dart';
+import 'package:ss_menu/models/app_state.dart';
 import 'package:ss_menu/widgets/menu_section.dart';
-import 'package:ss_menu/models/menu_item_category.dart';
 
 class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<MenuItemCategory> categories = [];
-    categories.add(MenuItemCategory(
-      name: 'All-Day Breakfast',
-      items: [],
-    ));
-    categories.add(MenuItemCategory(
-      name: 'Main Course',
-      items: [],
-    ));
+    var appState = Provider.of<AppState>(context);
+    var selectedOutlet = appState.selectedOutlet;
+    var menuSections = dOutlets[selectedOutlet].menu;
 
     return Container(
       padding: EdgeInsets.only(
@@ -29,11 +25,11 @@ class Menu extends StatelessWidget {
         ),
       ),
       child: ListView.builder(
-        itemCount: categories.length,
+        itemCount: menuSections.length,
         itemBuilder: (context, itemIndex) {
           return MenuSection(
-            sectionName: categories[itemIndex].name,
-            sectionItems: categories[itemIndex].items,
+            sectionName: menuSections[itemIndex].name,
+            sectionItems: menuSections[itemIndex].items,
           );
         },
       ),

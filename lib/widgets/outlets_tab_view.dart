@@ -23,10 +23,11 @@ class OutletsTabView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   OutletTabButton(
+                    id: 'ss',
                     text: 'SkewerSpot',
-                    isActive: true,
                   ),
                   OutletTabButton(
+                    id: 'tfk',
                     text: 'TFK',
                   ),
                 ],

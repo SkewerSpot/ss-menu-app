@@ -3,8 +3,14 @@ import 'package:ss_menu/models/menu_item.dart';
 
 var dTFKMenu = [
   MenuItemCategory(
-    name: 'All-Day Breakfast (TFK)',
+    name: 'All Day Meals',
     items: [
+      MenuItem(
+        name: 'Bheeja Kulcha [2pc]',
+        category: 'ADB',
+        isNonVeg: false,
+        price: 80,
+      ),
       MenuItem(
         name: 'Nutri Kulcha [2pc]',
         category: 'ADB',
@@ -36,7 +42,7 @@ var dTFKMenu = [
         price: 80,
       ),
       MenuItem(
-        name: 'Popular Pav Bhaji',
+        name: 'Bombay Pav Bhaji',
         category: 'ADB',
         isNonVeg: false,
         price: 90,
@@ -46,12 +52,6 @@ var dTFKMenu = [
         category: 'ADB',
         isNonVeg: false,
         price: 120,
-      ),
-      MenuItem(
-        name: 'Chinese Idli',
-        category: 'ADB',
-        isNonVeg: false,
-        price: 140,
       ),
       MenuItem(
         name: 'Cheesy Grilled Sandwich [4 Pieces]',

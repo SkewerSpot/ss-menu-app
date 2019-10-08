@@ -54,13 +54,13 @@ var dSSMenu = [
         price: 140,
       ),
       MenuItem(
-        name: 'Cheesy Grilled Sandwich [4 Pieces]',
+        name: 'Cheesy Grilled S/W [4pc]',
         category: 'ADB',
         isNonVeg: false,
         price: 140,
       ),
       MenuItem(
-        name: 'Paneer Grilled Sandwich [4 Pieces]',
+        name: 'Paneer Grilled S/W [4pc]',
         category: 'ADB',
         isNonVeg: false,
         price: 160,
@@ -96,5 +96,5 @@ var dSSMenu = [
         price: 10,
       ),
     ],
-  )
+  ),
 ];

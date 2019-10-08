@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ss_menu/constants.dart';
 import 'package:ss_menu/widgets/menu_screen_top_bar.dart';
 import 'package:ss_menu/widgets/outlets_tab_view.dart';
 
@@ -6,7 +7,7 @@ class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFCCA30),
+      backgroundColor: kThemeColorYellow,
       body: SafeArea(
         child: Column(
           children: <Widget>[

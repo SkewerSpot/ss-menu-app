@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ss_menu/constants.dart';
 
 class MenuItemCard extends StatelessWidget {
   MenuItemCard({
@@ -44,7 +45,7 @@ class MenuItemCard extends StatelessWidget {
                 width: 35.0,
                 height: 35.0,
                 child: FloatingActionButton(
-                  backgroundColor: Color(0xFF7D88ED),
+                  backgroundColor: kThemeColorPurple,
                   child: Icon(
                     Icons.add,
                     size: 25.0,

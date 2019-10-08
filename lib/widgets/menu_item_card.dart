@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:ss_menu/constants.dart';
+import 'package:ss_menu/models/app_state.dart';
 import 'package:ss_menu/models/menu_item.dart';
+import 'package:ss_menu/models/order_item.dart';
 
 class MenuItemCard extends StatelessWidget {
   final MenuItem item;
@@ -58,7 +61,15 @@ class MenuItemCard extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(13.0),
                   ),
-                  onPressed: () => {},
+                  onPressed: () {
+                    var appState = Provider.of<AppState>(context);
+                    appState.addItemToCart(OrderItem(
+                      name: this.item.name,
+                      category: this.item.category,
+                      isNonVeg: this.item.isNonVeg,
+                      price: this.item.price,
+                    ));
+                  },
                 ),
               ),
             ],

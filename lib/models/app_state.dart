@@ -6,8 +6,8 @@ class AppState extends ChangeNotifier {
   //
   // Private fields
   //
-  String _selectedOutlet;
-  List<OrderItem> _itemsInCart;
+  String _selectedOutlet = '';
+  List<OrderItem> _itemsInCart = [];
 
   //
   // Public getters
@@ -39,5 +39,6 @@ class AppState extends ChangeNotifier {
 
   void removeItemFromCart(OrderItem item) {
     this._itemsInCart.remove(item);
+    this.notifyListeners();
   }
 }

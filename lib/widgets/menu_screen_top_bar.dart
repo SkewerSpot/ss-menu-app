@@ -10,15 +10,15 @@ class MenuScreenTopBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        Icon(
-          Icons.menu,
-          size: 30.0,
+        SizedBox(
+          height: 30.0,
+          width: 30.0,
         ),
         Text(
-          'Order Menu',
+          'Menu App',
           style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
+            fontFamily: 'Pacifico',
+            fontSize: 30.0,
           ),
         ),
         Icon(

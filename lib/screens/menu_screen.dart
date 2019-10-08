@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ss_menu/widgets/menu_screen_top_bar.dart';
 
 class MenuScreen extends StatelessWidget {
   @override
@@ -11,26 +12,7 @@ class MenuScreen extends StatelessWidget {
             horizontal: 20.0,
             vertical: 10.0,
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Icon(
-                Icons.menu,
-                size: 30.0,
-              ),
-              Text(
-                'Order Menu',
-                style: TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Icon(
-                Icons.shopping_cart,
-                size: 30.0,
-              ),
-            ],
-          ),
+          child: MenuScreenTopBar(),
         ),
       ),
     );

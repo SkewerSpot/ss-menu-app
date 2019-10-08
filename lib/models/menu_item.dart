@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'item.dart';
 import 'menu_item_type.dart';
 
@@ -11,6 +12,9 @@ class MenuItem extends Item {
   final List<String> inclusions;
 
   MenuItem({
+    @required String name,
+    @required String category,
+    @required bool isNonVeg,
     this.price,
     this.types,
     this.imagePath,
@@ -18,5 +22,9 @@ class MenuItem extends Item {
     this.syrups,
     this.toppings,
     this.inclusions,
-  });
+  }) : super(
+          name: name,
+          category: category,
+          isNonVeg: isNonVeg,
+        );
 }

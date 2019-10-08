@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ss_menu/widgets/outlet_tab_button.dart';
+import 'package:ss_menu/widgets/menu.dart';
 
 class OutletsTabView extends StatelessWidget {
   @override
@@ -13,6 +14,7 @@ class OutletsTabView extends StatelessWidget {
         color: Color(0xFFE73930),
         height: double.infinity,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Padding(
               padding: EdgeInsets.symmetric(
@@ -32,7 +34,10 @@ class OutletsTabView extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
+            Expanded(
+              child: Menu(),
+            ),
           ],
         ),
       ),

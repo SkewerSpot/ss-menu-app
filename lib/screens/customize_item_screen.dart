@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ss_menu/constants.dart';
 import 'package:ss_menu/models/menu_item.dart';
+import 'package:ss_menu/models/menu_item_type.dart';
+import 'package:ss_menu/widgets/radio_tile_list.dart';
 
 class CustomizeItemScreen extends StatefulWidget {
   final MenuItem item;
@@ -30,8 +32,10 @@ class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Center(
-            child: Text('Customize ${this.widget.item.name}',
-                style: kHeadingStyle),
+            child: Text(
+              'Customize ${this.widget.item.name}',
+              style: kHeadingStyle,
+            ),
           ),
           SizedBox(
             height: 10.0,
@@ -41,21 +45,15 @@ class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
             style: kSubHeadingStyle,
           ),
           Expanded(
-            child: ListView.builder(
-              itemCount: this.widget.item.types.length,
-              itemBuilder: (context, itemIndex) {
-                var type = this.widget.item.types[itemIndex];
-                return RadioListTile<String>(
-                  title: Text(type.name),
-                  subtitle: Text('₹ ${type.price.toString()}'),
-                  value: type.name,
-                  groupValue: this.selectedType,
-                  activeColor: kThemeColorRed,
-                  onChanged: (String value) {
-                    this.setState(() => this.selectedType = value);
-                    print(this.selectedType);
-                  },
-                );
+            child: RadioTileList(
+              options: Map.fromIterable(
+                this.widget.item.types,
+                key: (type) => (type as MenuItemType).name,
+                value: (type) => (type as MenuItemType).price.toString(),
+              ),
+              selectedValue: this.selectedType,
+              onChanged: (String value) {
+                this.setState(() => this.selectedType = value);
               },
             ),
           ),

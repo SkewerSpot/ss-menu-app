@@ -4,6 +4,7 @@ import 'package:ss_menu/constants.dart';
 import 'package:ss_menu/models/app_state.dart';
 import 'package:ss_menu/models/menu_item.dart';
 import 'package:ss_menu/models/order_item.dart';
+import 'package:ss_menu/screens/customize_item_screen.dart';
 
 class MenuItemCard extends StatelessWidget {
   final MenuItem item;
@@ -15,6 +16,10 @@ class MenuItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isCustomizable = this.item.types is List;
+    double price =
+        isCustomizable ? this.item.types[0].price : (this.item.price ?? 0);
+
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 10.0),
       child: Material(
@@ -40,12 +45,13 @@ class MenuItemCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '₹ ${this.item.price.toString()}',
+                    '₹ ${price.toString()}',
                     textAlign: TextAlign.start,
                     style: TextStyle(
                       fontSize: 14.0,
                     ),
                   ),
+                  isCustomizable ? Text('customizations available') : Text(''),
                 ],
               ),
               Container(
@@ -62,13 +68,22 @@ class MenuItemCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(13.0),
                   ),
                   onPressed: () {
-                    var appState = Provider.of<AppState>(context);
-                    appState.addItemToCart(OrderItem(
-                      name: this.item.name,
-                      category: this.item.category,
-                      isNonVeg: this.item.isNonVeg,
-                      price: this.item.price,
-                    ));
+                    if (isCustomizable) {
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (context) => CustomizeItemScreen(
+                          item: this.item,
+                        ),
+                      );
+                    } else {
+                      var appState = Provider.of<AppState>(context);
+                      appState.addItemToCart(OrderItem(
+                        name: this.item.name,
+                        category: this.item.category,
+                        isNonVeg: this.item.isNonVeg,
+                        price: this.item.price,
+                      ));
+                    }
                   },
                 ),
               ),

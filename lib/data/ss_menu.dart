@@ -1,5 +1,6 @@
 import 'package:ss_menu/models/menu_item_category.dart';
 import 'package:ss_menu/models/menu_item.dart';
+import 'package:ss_menu/models/menu_item_type.dart';
 
 var dSSMenu = [
   MenuItemCategory(
@@ -9,7 +10,7 @@ var dSSMenu = [
         name: 'Nutri Kulcha [2pc]',
         category: 'ADB',
         isNonVeg: false,
-        price: 80,
+        price: 100,
       ),
       MenuItem(
         name: 'Palak Chaamp Kulcha [2pc]',
@@ -94,6 +95,32 @@ var dSSMenu = [
         category: 'ADB',
         isNonVeg: false,
         price: 10,
+      ),
+    ],
+  ),
+  MenuItemCategory(
+    name: 'Fries',
+    items: [
+      MenuItem(
+        name: 'Potato Tornado',
+        category: 'Fries',
+        isNonVeg: false,
+        types: [
+          MenuItemType(
+            name: 'Regular',
+            price: 70,
+          ),
+        ],
+        syrups: [
+          'Cheese',
+          'Garlic Chilly',
+          'Mint Mayonnaise',
+          'Sweet Onion',
+          'Southwest',
+          'Barbeque',
+          'Sweet Chilly',
+          'Peri-peri',
+        ],
       ),
     ],
   ),

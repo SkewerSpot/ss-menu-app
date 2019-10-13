@@ -30,18 +30,18 @@ class RadioTileList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: this.options.length,
-      itemBuilder: (context, itemIndex) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: this.options.keys.map((key) {
         return RadioListTile<String>(
-          title: Text(this.options.keys.elementAt(itemIndex)),
-          subtitle: Text('₹ ${this.options.values.elementAt(itemIndex)}'),
-          value: this.options.keys.elementAt(itemIndex),
+          title: Text(key),
+          subtitle: Text('₹ ${this.options[key]}'),
+          value: key,
           groupValue: this.selectedValue,
           activeColor: kThemeColorRed,
           onChanged: this.onChanged,
         );
-      },
+      }).toList(),
     );
   }
 }

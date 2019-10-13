@@ -17,6 +17,7 @@ class CustomizeItemScreen extends StatefulWidget {
 class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
   String selectedType;
   List<String> selectedSyrups;
+  List<String> selectedToppings;
 
   @override
   void initState() {
@@ -24,14 +25,14 @@ class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
 
     this.selectedType = this.widget.item.types[0].name;
     this.selectedSyrups = [];
+    this.selectedToppings = [];
   }
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(20.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: ListView(
         children: [
           Center(
             child: Text(
@@ -46,31 +47,38 @@ class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
             'Pick type',
             style: kSubHeadingStyle,
           ),
-          Expanded(
-            child: RadioTileList(
-              options: Map.fromIterable(
-                this.widget.item.types,
-                key: (type) => (type as MenuItemType).name,
-                value: (type) => (type as MenuItemType).price.toString(),
-              ),
-              selectedValue: this.selectedType,
-              onChanged: (String value) {
-                this.setState(() => this.selectedType = value);
-              },
+          RadioTileList(
+            options: Map.fromIterable(
+              this.widget.item.types,
+              key: (type) => (type as MenuItemType).name,
+              value: (type) => (type as MenuItemType).price.toString(),
             ),
-          ),
-          SizedBox(
-            height: 10.0,
-          ),
-          Text(
-            'Pick syrups',
-            style: kSubHeadingStyle,
-          ),
-          SelectionButtonList(
-            values: this.widget.item.syrups,
-            onChanged: (String value, List<String> selectedValues) {
-              this.setState(() => this.selectedSyrups = selectedValues);
+            selectedValue: this.selectedType,
+            onChanged: (String value) {
+              this.setState(() => this.selectedType = value);
             },
+          ),
+          Visibility(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                SizedBox(
+                  height: 10.0,
+                ),
+                Text(
+                  'Pick syrups',
+                  style: kSubHeadingStyle,
+                ),
+                SelectionButtonList(
+                  values: this.widget.item.syrups,
+                  onChanged: (String value, List<String> selectedValues) {
+                    this.setState(() => this.selectedSyrups = selectedValues);
+                  },
+                ),
+              ],
+            ),
+            visible: this.widget.item.syrups != null &&
+                this.widget.item.syrups.length > 0,
           ),
         ],
       ),

@@ -13,7 +13,7 @@ class ScreenActionButton extends StatelessWidget {
       color: kThemeColorPurple,
       padding: EdgeInsets.all(20.0),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0),
+        borderRadius: BorderRadius.circular(30.0),
       ),
       child: Text(
         this.text,

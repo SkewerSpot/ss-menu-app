@@ -64,6 +64,7 @@ class _SelectionButtonListState extends State<SelectionButtonList> {
                     ]; // add value to list
                 }
               });
+              this.widget.onChanged(value, this.selectedValues);
             },
           ),
         );

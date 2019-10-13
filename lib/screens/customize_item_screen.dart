@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:ss_menu/constants.dart';
+import 'package:ss_menu/models/app_state.dart';
 import 'package:ss_menu/models/menu_item.dart';
 import 'package:ss_menu/models/menu_item_type.dart';
+import 'package:ss_menu/models/order_item.dart';
 import 'package:ss_menu/widgets/radio_tile_list.dart';
 import 'package:ss_menu/widgets/selection_button_list.dart';
 import 'package:ss_menu/widgets/handle_line.dart';
@@ -112,6 +115,33 @@ class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
                   visible: this.widget.item.toppings != null &&
                       this.widget.item.toppings.length > 0,
                 ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                FlatButton(
+                  color: kThemeColorPurple,
+                  padding: EdgeInsets.all(10.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: Text(
+                    'Add to cart',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  onPressed: () {
+                    var appState = Provider.of<AppState>(context);
+                    appState.addItemToCart(OrderItem(
+                      name: this.widget.item.name,
+                      category: this.widget.item.category,
+                      isNonVeg: this.widget.item.isNonVeg,
+                      price: this.widget.item.price,
+                      syrups: this.selectedSyrups,
+                      toppings: this.selectedToppings,
+                    ));
+                  },
+                )
               ],
             ),
           ),

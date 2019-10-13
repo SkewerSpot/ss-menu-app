@@ -80,6 +80,28 @@ class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
             visible: this.widget.item.syrups != null &&
                 this.widget.item.syrups.length > 0,
           ),
+          Visibility(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                SizedBox(
+                  height: 10.0,
+                ),
+                Text(
+                  'Pick toppings',
+                  style: kSubHeadingStyle,
+                ),
+                SelectionButtonList(
+                  values: this.widget.item.toppings,
+                  onChanged: (String value, List<String> selectedValues) {
+                    this.setState(() => this.selectedToppings = selectedValues);
+                  },
+                ),
+              ],
+            ),
+            visible: this.widget.item.toppings != null &&
+                this.widget.item.toppings.length > 0,
+          ),
         ],
       ),
     );

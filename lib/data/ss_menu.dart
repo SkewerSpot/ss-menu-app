@@ -124,4 +124,70 @@ var dSSMenu = [
       ),
     ],
   ),
+  MenuItemCategory(
+    name: 'Waffle',
+    items: [
+      MenuItem(
+        name: 'Make Your Own',
+        category: 'Waffle',
+        isNonVeg: false,
+        types: [
+          MenuItemType(
+            name: 'Regular Stick Regular Base',
+            price: 100,
+          ),
+          MenuItemType(
+            name: 'Regular Stick Chocolate Base',
+            price: 120,
+          ),
+          MenuItemType(
+            name: 'Regular Stick Redvelvet Base',
+            price: 130,
+          ),
+          MenuItemType(
+            name: 'Large Stick Regular Base',
+            price: 140,
+          ),
+          MenuItemType(
+            name: 'Large Stick Chocolate Base',
+            price: 160,
+          ),
+          MenuItemType(
+            name: 'Large Stick Redvelvet Base',
+            price: 170,
+          ),
+          MenuItemType(
+            name: 'Classic Regular Base',
+            price: 140,
+          ),
+          MenuItemType(
+            name: 'Classic Chocolate Base',
+            price: 160,
+          ),
+          MenuItemType(
+            name: 'Classic Redvelvet Base',
+            price: 170,
+          ),
+        ],
+        syrups: [
+          'Chocolate',
+          'White Chocolate',
+          'Orange Chocolate',
+          'Caramel',
+          'Honey',
+          'Blueberry Syrup',
+          'Strawberry Syrup',
+          'Strawberry Chocolate',
+        ],
+        toppings: [
+          'Almonds',
+          'Sprinkles',
+          'Oreo Bits',
+          'Choco Chips',
+          'Brownie Bits',
+          'Gems',
+        ],
+      )
+    ],
+  ),
 ];

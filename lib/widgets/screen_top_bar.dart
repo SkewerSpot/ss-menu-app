@@ -3,11 +3,7 @@ import 'package:badges/badges.dart';
 import 'package:provider/provider.dart';
 import 'package:ss_menu/models/app_state.dart';
 
-class MenuScreenTopBar extends StatelessWidget {
-  const MenuScreenTopBar({
-    Key key,
-  }) : super(key: key);
-
+class ScreenTopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var appState = Provider.of<AppState>(context);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ss_menu/constants.dart';
-import 'package:ss_menu/widgets/menu_screen_top_bar.dart';
+import 'package:ss_menu/widgets/screen_top_bar.dart';
 import 'package:ss_menu/widgets/outlets_tab_view.dart';
 
 class MenuScreen extends StatelessWidget {
@@ -16,7 +16,7 @@ class MenuScreen extends StatelessWidget {
                 horizontal: 20.0,
                 vertical: 10.0,
               ),
-              child: MenuScreenTopBar(),
+              child: ScreenTopBar(),
             ),
             SizedBox(
               height: 20.0,

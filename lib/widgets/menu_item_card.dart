@@ -71,6 +71,12 @@ class MenuItemCard extends StatelessWidget {
                     if (isCustomizable) {
                       showModalBottomSheet(
                         context: context,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30.0),
+                            topRight: Radius.circular(30.0),
+                          ),
+                        ),
                         builder: (context) => CustomizeItemScreen(
                           item: this.item,
                         ),

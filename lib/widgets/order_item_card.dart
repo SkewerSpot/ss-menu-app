@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:ss_menu/constants.dart';
 import 'package:ss_menu/models/app_state.dart';
 import 'package:ss_menu/models/menu_item.dart';
+import 'package:ss_menu/widgets/addon_list.dart';
 
 class OrderItemCard extends StatelessWidget {
   final MenuItem item;
@@ -28,25 +29,36 @@ class OrderItemCard extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    item.name,
-                    textAlign: TextAlign.start,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18.0,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      item.name,
+                      textAlign: TextAlign.start,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18.0,
+                      ),
                     ),
-                  ),
-                  Text(
-                    '₹ ${this.item.price.toString()}',
-                    textAlign: TextAlign.start,
-                    style: TextStyle(
-                      fontSize: 14.0,
+                    Text(
+                      '₹ ${this.item.price.toString()}',
+                      textAlign: TextAlign.start,
+                      style: TextStyle(
+                        fontSize: 14.0,
+                      ),
                     ),
-                  ),
-                ],
+                    AddonList(
+                      addons: this.item.syrups,
+                    ),
+                    SizedBox(
+                      height: 5.0,
+                    ),
+                    AddonList(
+                      addons: this.item.toppings,
+                    ),
+                  ],
+                ),
               ),
               Container(
                 width: 35.0,

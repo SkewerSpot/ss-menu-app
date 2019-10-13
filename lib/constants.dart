@@ -11,3 +11,6 @@ const TextStyle kHeadingStyle = TextStyle(
 const TextStyle kSubHeadingStyle = TextStyle(
   fontSize: 18.0,
 );
+
+const double kExtraSyrupPrice = 20.0;
+const double kExtraToppingPrice = 20.0;

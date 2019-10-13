@@ -144,6 +144,7 @@ class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
                       syrups: this.selectedSyrups,
                       toppings: this.selectedToppings,
                     ));
+                    Navigator.of(context).pop();
                   },
                 )
               ],

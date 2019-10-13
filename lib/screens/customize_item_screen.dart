@@ -6,6 +6,7 @@ import 'package:ss_menu/models/menu_item.dart';
 import 'package:ss_menu/models/menu_item_type.dart';
 import 'package:ss_menu/models/order_item.dart';
 import 'package:ss_menu/widgets/radio_tile_list.dart';
+import 'package:ss_menu/widgets/screen_action_button.dart';
 import 'package:ss_menu/widgets/selection_button_list.dart';
 import 'package:ss_menu/widgets/handle_line.dart';
 
@@ -121,18 +122,8 @@ class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
                 SizedBox(
                   height: 10.0,
                 ),
-                FlatButton(
-                  color: kThemeColorPurple,
-                  padding: EdgeInsets.all(10.0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  child: Text(
-                    'Add to cart',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
+                ScreenActionButton(
+                  text: 'Add to cart',
                   onPressed: () {
                     var appState = Provider.of<AppState>(context);
                     appState.addItemToCart(OrderItem(

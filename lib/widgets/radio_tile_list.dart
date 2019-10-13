@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ss_menu/constants.dart';
 
+/// Interface for [RadioTileList]'s onChanged callback.
+typedef void OnChangedCallback(
+  Map<String, String> changedOption,
+);
+
 /// A list of radio options.
 ///
 /// This widget wraps Material's [RadioListTile] into a ListView,
@@ -20,7 +25,7 @@ class RadioTileList extends StatelessWidget {
 
   /// A callback function that is assigned as changed event handler
   /// to all [RadioListTile]s.
-  final Function onChanged;
+  final OnChangedCallback onChanged;
 
   RadioTileList({
     @required this.options,
@@ -39,7 +44,9 @@ class RadioTileList extends StatelessWidget {
           value: key,
           groupValue: this.selectedValue,
           activeColor: kThemeColorRed,
-          onChanged: this.onChanged,
+          onChanged: (String value) {
+            this.onChanged({key: this.options[key]});
+          },
         );
       }).toList(),
     );

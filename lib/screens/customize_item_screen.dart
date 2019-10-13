@@ -19,7 +19,7 @@ class CustomizeItemScreen extends StatefulWidget {
 }
 
 class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
-  String selectedType;
+  MenuItemType selectedType;
   List<String> selectedSyrups;
   List<String> selectedToppings;
 
@@ -27,7 +27,7 @@ class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
   void initState() {
     super.initState();
 
-    this.selectedType = this.widget.item.types[0].name;
+    this.selectedType = this.widget.item.types[0];
     this.selectedSyrups = [];
     this.selectedToppings = [];
   }
@@ -64,9 +64,12 @@ class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
                     key: (type) => (type as MenuItemType).name,
                     value: (type) => (type as MenuItemType).price.toString(),
                   ),
-                  selectedValue: this.selectedType,
-                  onChanged: (String value) {
-                    this.setState(() => this.selectedType = value);
+                  selectedValue: this.selectedType.name,
+                  onChanged: (Map<String, String> option) {
+                    this.setState(() => this.selectedType = MenuItemType(
+                          name: option.keys.first,
+                          price: double.parse(option.values.first),
+                        ));
                   },
                 ),
                 Visibility(
@@ -136,7 +139,8 @@ class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
                       name: this.widget.item.name,
                       category: this.widget.item.category,
                       isNonVeg: this.widget.item.isNonVeg,
-                      price: this.widget.item.price,
+                      price: this.selectedType.price,
+                      selectedType: this.selectedType,
                       syrups: this.selectedSyrups,
                       toppings: this.selectedToppings,
                     ));

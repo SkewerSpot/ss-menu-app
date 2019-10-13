@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ss_menu/data/outlets.dart';
+import 'package:ss_menu/screens/cart_screen.dart';
 import 'package:ss_menu/screens/menu_screen.dart';
 import 'package:ss_menu/models/app_state.dart';
 
@@ -27,7 +28,11 @@ class _SSMenuAppState extends State<SSMenuApp> {
       builder: (context) => this.appState,
       child: MaterialApp(
         theme: ThemeData(fontFamily: 'Poppins'),
-        home: MenuScreen(),
+        routes: {
+          MenuScreen.id: (context) => MenuScreen(),
+          CartScreen.id: (context) => CartScreen(),
+        },
+        initialRoute: MenuScreen.id,
       ),
     );
   }

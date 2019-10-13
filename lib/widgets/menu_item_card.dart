@@ -57,13 +57,14 @@ class MenuItemCard extends StatelessWidget {
               Container(
                 width: 35.0,
                 height: 35.0,
-                child: FloatingActionButton(
-                  backgroundColor: kThemeColorPurple,
+                child: FlatButton(
+                  padding: EdgeInsets.all(0.0),
+                  color: kThemeColorPurple,
                   child: Icon(
                     Icons.add,
                     size: 25.0,
+                    color: Colors.white,
                   ),
-                  elevation: 0.0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(13.0),
                   ),

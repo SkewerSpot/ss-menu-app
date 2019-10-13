@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ss_menu/constants.dart';
 import 'package:ss_menu/models/app_state.dart';
+import 'package:ss_menu/widgets/screen_action_button.dart';
 import 'package:ss_menu/widgets/screen_top_bar.dart';
 
 class CartScreen extends StatelessWidget {
@@ -74,6 +75,7 @@ class CartScreen extends StatelessWidget {
                             ),
                           ),
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: <Widget>[
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -87,6 +89,10 @@ class CartScreen extends StatelessWidget {
                                     ),
                                   )
                                 ],
+                              ),
+                              ScreenActionButton(
+                                text: 'Place order',
+                                onPressed: () => {},
                               )
                             ],
                           ),

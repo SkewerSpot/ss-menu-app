@@ -26,7 +26,7 @@ class SelectionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
-      color: this.isSelected ? kThemeColorRed : Colors.transparent,
+      color: this.isSelected ? kThemeColorRed : kThemeColorYellow,
       child: Text(
         this.value,
         style: TextStyle(

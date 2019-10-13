@@ -3,6 +3,7 @@ import 'package:ss_menu/constants.dart';
 import 'package:ss_menu/models/menu_item.dart';
 import 'package:ss_menu/models/menu_item_type.dart';
 import 'package:ss_menu/widgets/radio_tile_list.dart';
+import 'package:ss_menu/widgets/selection_button_list.dart';
 
 class CustomizeItemScreen extends StatefulWidget {
   final MenuItem item;
@@ -15,13 +16,14 @@ class CustomizeItemScreen extends StatefulWidget {
 
 class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
   String selectedType;
-  String selectedSyrup;
+  List<String> selectedSyrups;
 
   @override
   void initState() {
     super.initState();
 
     this.selectedType = this.widget.item.types[0].name;
+    this.selectedSyrups = [];
   }
 
   @override
@@ -56,6 +58,19 @@ class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
                 this.setState(() => this.selectedType = value);
               },
             ),
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
+          Text(
+            'Pick syrups',
+            style: kSubHeadingStyle,
+          ),
+          SelectionButtonList(
+            values: this.widget.item.syrups,
+            onChanged: (String value, List<String> selectedValues) {
+              this.setState(() => this.selectedSyrups = selectedValues);
+            },
           ),
         ],
       ),

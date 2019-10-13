@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ss_menu/constants.dart';
 import 'package:ss_menu/models/app_state.dart';
+import 'package:ss_menu/widgets/order_item_card.dart';
 import 'package:ss_menu/widgets/screen_action_button.dart';
 import 'package:ss_menu/widgets/screen_top_bar.dart';
 
@@ -62,10 +63,9 @@ class CartScreen extends StatelessWidget {
                       Expanded(
                         child: Container(
                           margin: EdgeInsets.only(top: 15.0),
-                          padding: EdgeInsets.only(
-                            top: 10.0,
-                            left: 20.0,
-                            right: 20.0,
+                          padding: EdgeInsets.symmetric(
+                            vertical: 10.0,
+                            horizontal: 20.0,
                           ),
                           decoration: BoxDecoration(
                             color: Colors.white,
@@ -89,6 +89,26 @@ class CartScreen extends StatelessWidget {
                                     ),
                                   )
                                 ],
+                              ),
+                              SizedBox(
+                                height: 10.0,
+                              ),
+                              Expanded(
+                                child: ListView.separated(
+                                  itemCount: appState.getCartSize(),
+                                  itemBuilder: (context, itemIndex) {
+                                    return OrderItemCard(
+                                      key: UniqueKey(),
+                                      item: appState.itemsInCart[itemIndex],
+                                    );
+                                  },
+                                  separatorBuilder: (context, itemIndex) {
+                                    return SizedBox(height: 15.0);
+                                  },
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10.0,
                               ),
                               ScreenActionButton(
                                 text: 'Place order',

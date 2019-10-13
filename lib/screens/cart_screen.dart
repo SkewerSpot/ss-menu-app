@@ -13,7 +13,7 @@ class CartScreen extends StatelessWidget {
     var appState = Provider.of<AppState>(context);
     double cartValue = 0.0;
     if (appState.getCartSize() > 0) {
-      appState.itemsInCart
+      cartValue = appState.itemsInCart
           .map((item) => item.price)
           .reduce((totalPrice, price) => totalPrice + price);
     }

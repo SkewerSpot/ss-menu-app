@@ -20,3 +20,7 @@ const Map<String, String> kChannels = {
   'zomato': 'Zomato',
   'swiggy': 'Swiggy',
 };
+const Map<String, String> kTaxOptions = {
+  'inclusive': 'Taxes included',
+  'exclusive': 'Taxes extra',
+};

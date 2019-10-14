@@ -14,3 +14,9 @@ const TextStyle kSubHeadingStyle = TextStyle(
 
 const double kExtraSyrupPrice = 20.0;
 const double kExtraToppingPrice = 20.0;
+
+const Map<String, String> kChannels = {
+  'instore': 'In-store',
+  'zomato': 'Zomato',
+  'swiggy': 'Swiggy',
+};

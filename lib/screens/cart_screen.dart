@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ss_menu/constants.dart';
 import 'package:ss_menu/models/app_state.dart';
+import 'package:ss_menu/screens/confirm_order_screen.dart';
 import 'package:ss_menu/widgets/order_item_card.dart';
 import 'package:ss_menu/widgets/screen_action_button.dart';
 import 'package:ss_menu/widgets/screen_top_bar.dart';
@@ -112,7 +113,21 @@ class CartScreen extends StatelessWidget {
                               ),
                               ScreenActionButton(
                                 text: 'Place order',
-                                onPressed: () => {},
+                                onPressed: () {
+                                  if (appState.getCartSize() > 0) {
+                                    showModalBottomSheet(
+                                      context: context,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(30.0),
+                                          topRight: Radius.circular(30.0),
+                                        ),
+                                      ),
+                                      builder: (context) =>
+                                          ConfirmOrderScreen(),
+                                    );
+                                  }
+                                },
                               )
                             ],
                           ),

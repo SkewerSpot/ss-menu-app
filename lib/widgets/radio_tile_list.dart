@@ -27,10 +27,15 @@ class RadioTileList extends StatelessWidget {
   /// to all [RadioListTile]s.
   final OnChangedCallback onChanged;
 
+  /// Controls the visibility of tile subtitle:
+  /// true by default.
+  final bool showSubtitle;
+
   RadioTileList({
     @required this.options,
     this.selectedValue,
     this.onChanged,
+    this.showSubtitle = true,
   });
 
   @override
@@ -38,15 +43,45 @@ class RadioTileList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: this.options.keys.map((key) {
-        return RadioListTile<String>(
-          title: Text(key),
-          subtitle: Text('₹ ${this.options[key]}'),
-          value: key,
-          groupValue: this.selectedValue,
-          activeColor: kThemeColorRed,
-          onChanged: (String value) {
-            this.onChanged({key: this.options[key]});
-          },
+        return Container(
+          margin: EdgeInsets.symmetric(vertical: 5.0),
+          child: Row(
+            children: <Widget>[
+              Radio<String>(
+                value: key,
+                groupValue: this.selectedValue,
+                activeColor: kThemeColorRed,
+                onChanged: (String value) {
+                  this.onChanged({key: this.options[key]});
+                },
+              ),
+              Expanded(
+                child: InkWell(
+                  onTap: () {
+                    if (key != this.selectedValue) {
+                      this.onChanged({key: this.options[key]});
+                    }
+                  },
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        key,
+                        style: TextStyle(fontSize: 16.0),
+                      ),
+                      Visibility(
+                        visible: this.showSubtitle,
+                        child: Text(
+                          this.options[key],
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         );
       }).toList(),
     );

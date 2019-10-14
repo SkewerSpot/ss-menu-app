@@ -49,13 +49,13 @@ class OrderItemCard extends StatelessWidget {
                       ),
                     ),
                     AddonList(
-                      addons: this.item.syrups,
+                      addons: this.item.syrups ?? [],
                     ),
                     SizedBox(
                       height: 5.0,
                     ),
                     AddonList(
-                      addons: this.item.toppings,
+                      addons: this.item.toppings ?? [],
                     ),
                   ],
                 ),

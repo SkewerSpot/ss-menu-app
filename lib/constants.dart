@@ -24,3 +24,7 @@ const Map<String, String> kTaxOptions = {
   'inclusive': 'Taxes included',
   'exclusive': 'Taxes extra',
 };
+
+const double kTaxRateCGST = 0.025;
+const double kTaxRateSGST = 0.025;
+const double kTaxRateGST = 0.05;

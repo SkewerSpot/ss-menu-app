@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:ss_menu/constants.dart';
 import 'order_item.dart';
 
 class CustomerOrder {
@@ -35,20 +36,19 @@ class CustomerOrder {
     this.customerComments,
     @required this.orderItems,
     @required this.token,
-    @required this.timestamp,
     this.timeOfDay,
     this.isPaidFor = false,
     this.isCompleted = false,
     this.isReceiptIssued = false,
-    @required this.completedTimestamp,
+    this.completedTimestamp = '',
     this.isCancelled = false,
     this.isDiscounted = false,
-    this.discountAmount,
+    this.discountAmount = 0.0,
     @required this.channel,
-    this.taxRateCGST,
-    this.taxRateSGST,
-    this.taxRateGST,
+    this.taxRateCGST = kTaxRateCGST,
+    this.taxRateSGST = kTaxRateSGST,
+    this.taxRateGST = kTaxRateGST,
     this.isInclusiveOfTaxes = false,
     @required this.source,
-  });
+  }) : this.timestamp = DateTime.now().toIso8601String();
 }

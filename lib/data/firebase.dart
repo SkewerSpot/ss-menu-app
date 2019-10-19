@@ -31,9 +31,12 @@ class FirebaseService {
 
   static Future<bool> postCustomerOrder(CustomerOrder order) async {
     try {
-      await _databaseRef.child('open-orders/${order.orderId}').set(order);
+      await _databaseRef
+          .child('open-orders/${order.orderId}')
+          .set(order.toMap());
       return true;
     } catch (e) {
+      print(e);
       return false;
     }
   }

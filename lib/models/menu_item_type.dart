@@ -5,4 +5,11 @@ class MenuItemType {
   final double price;
 
   MenuItemType({@required this.name, @required this.price});
+
+  Map<String, dynamic> toMap() {
+    return {
+      'name': this.name,
+      'price': this.price,
+    };
+  }
 }

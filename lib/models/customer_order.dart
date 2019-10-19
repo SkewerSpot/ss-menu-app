@@ -51,4 +51,32 @@ class CustomerOrder {
     this.isInclusiveOfTaxes = false,
     @required this.source,
   }) : this.timestamp = DateTime.now().toIso8601String();
+
+  Map<String, dynamic> toMap() {
+    return {
+      'orderId': this.orderId,
+      'customerName': this.customerName,
+      'customerMobile': this.customerMobile,
+      'customerCarNum': this.customerCarNum,
+      'customerCarMake': this.customerCarMake,
+      'customerComments': this.customerComments,
+      'orderItems': this.orderItems.map<Map>((item) => item.toMap()).toList(),
+      'token': this.token,
+      'timestamp': this.timestamp,
+      'timeOfDay': this.timeOfDay,
+      'isPaidFor': this.isPaidFor,
+      'isCompleted': this.isCompleted,
+      'isReceiptIssued': this.isReceiptIssued,
+      'completedTimestamp': this.completedTimestamp,
+      'isCancelled': this.isCancelled,
+      'isDiscounted': this.isDiscounted,
+      'discountAmount': this.discountAmount,
+      'channel': this.channel,
+      'taxRateCGST': this.taxRateCGST,
+      'taxRateSGST': this.taxRateSGST,
+      'taxRateGST': this.taxRateGST,
+      'isInclusiveOfTaxes': this.isInclusiveOfTaxes,
+      'source': this.source,
+    };
+  }
 }

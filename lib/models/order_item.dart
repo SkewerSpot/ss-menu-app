@@ -35,4 +35,26 @@ class OrderItem extends MenuItem {
           toppings: toppings,
           inclusions: inclusions,
         );
+
+  Map<String, dynamic> toMap() {
+    return {
+      'name': this.name,
+      'category': this.category,
+      'isNonVeg': this.isNonVeg,
+      'price': this.price,
+      'types': this.types != null
+          ? this.types.map<Map>((type) => type.toMap()).toList()
+          : null,
+      'imagePath': this.imagePath,
+      'description': this.description,
+      'syrups': this.syrups,
+      'toppings': this.toppings,
+      'inclusions': this.inclusions,
+      'sequenceNum': this.sequenceNum,
+      'selectedType':
+          this.selectedType != null ? this.selectedType.toMap() : null,
+      'withIceCream': this.withIceCream,
+      'isDone': this.isDone,
+    };
+  }
 }

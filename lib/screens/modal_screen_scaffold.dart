@@ -60,8 +60,8 @@ class ModalScreenScaffold extends StatelessWidget {
                       this.onScreenActionPressed != null,
                   child: ScreenActionButton(
                     text: this.screenActionText,
-                    onPressed: () {
-                      this.onScreenActionPressed();
+                    onPressed: () async {
+                      await this.onScreenActionPressed();
                       Navigator.of(context).pop();
                     },
                   ),

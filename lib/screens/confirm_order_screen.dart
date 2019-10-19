@@ -68,6 +68,7 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
 
         if (orderSuccessful) {
           await FirebaseService.setTokenForDate(orderDate, nextToken);
+          appState.resetCart();
         }
       },
       body: <Widget>[

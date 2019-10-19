@@ -41,4 +41,9 @@ class AppState extends ChangeNotifier {
     this._itemsInCart.remove(item);
     this.notifyListeners();
   }
+
+  void resetCart() {
+    this._itemsInCart.clear();
+    this.notifyListeners();
+  }
 }

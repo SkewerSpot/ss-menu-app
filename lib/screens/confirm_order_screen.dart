@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:ss_menu/constants.dart';
+import 'package:ss_menu/data/firebase.dart';
+import 'package:ss_menu/models/app_state.dart';
+import 'package:ss_menu/models/customer_order.dart';
 import 'package:ss_menu/screens/modal_screen_scaffold.dart';
+import 'package:ss_menu/util.dart';
 import 'package:ss_menu/widgets/radio_tile_list.dart';
 
 class ConfirmOrderScreen extends StatefulWidget {
@@ -34,10 +39,37 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
 
   @override
   Widget build(BuildContext context) {
+    AppState appState = Provider.of<AppState>(context);
+
     return ModalScreenScaffold(
       screenTitle: 'Confirm Order',
       screenActionText: 'Confirm',
-      onScreenActionPressed: () => {},
+      onScreenActionPressed: () async {
+        DateTime orderDate = DateTime.now();
+        int nextToken = await FirebaseService.getNextTokenForDate(orderDate);
+
+        final order = CustomerOrder(
+          orderId: Util.newUUID(),
+          customerName: this.customerName,
+          customerMobile: this.customerMobile,
+          customerCarNum: this.customerCarNum,
+          customerCarMake: this.customerCarMake,
+          customerComments: this.customerComments,
+          orderItems: appState.itemsInCart,
+          token: nextToken,
+          isDiscounted: this.discountAmount > 0,
+          discountAmount: this.discountAmount,
+          channel: this.selectedChannel,
+          isInclusiveOfTaxes: this.selectedTaxOption == 'inclusive',
+          source: 'menuapp',
+        );
+
+        bool orderSuccessful = await FirebaseService.postCustomerOrder(order);
+
+        if (orderSuccessful) {
+          await FirebaseService.setTokenForDate(orderDate, nextToken);
+        }
+      },
       body: <Widget>[
         Text(
           'Select channel',
@@ -76,13 +108,17 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
           height: 10.0,
         ),
         TextField(
-          keyboardType: TextInputType.number,
-          decoration: InputDecoration(
-            hintText: 'Discount',
-          ),
-          onChanged: (String value) =>
-              this.discountAmount = double.parse(value),
-        ),
+            keyboardType: TextInputType.number,
+            decoration: InputDecoration(
+              hintText: 'Discount',
+            ),
+            onChanged: (String value) {
+              try {
+                this.discountAmount = double.parse(value);
+              } on FormatException {
+                this.discountAmount = 0.0;
+              }
+            }),
         SizedBox(
           height: 10.0,
         ),

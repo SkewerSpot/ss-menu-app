@@ -12,9 +12,17 @@ class ScreenTopBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        SizedBox(
-          height: 30.0,
-          width: 30.0,
+        Visibility(
+          visible: Navigator.canPop(context),
+          replacement: SizedBox(
+            height: 30.0,
+            width: 30.0,
+          ),
+          child: IconButton(
+            iconSize: 30.0,
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () => Navigator.pop(context),
+          ),
         ),
         Text(
           'Menu App',

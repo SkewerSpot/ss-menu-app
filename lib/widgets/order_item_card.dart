@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:ss_menu/constants.dart';
 import 'package:ss_menu/models/app_state.dart';
-import 'package:ss_menu/models/menu_item.dart';
+import 'package:ss_menu/models/order_item.dart';
 import 'package:ss_menu/widgets/addon_list.dart';
 
 class OrderItemCard extends StatelessWidget {
-  final MenuItem item;
+  final OrderItem item;
 
   OrderItemCard({
     Key key,
@@ -16,6 +15,7 @@ class OrderItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var appState = Provider.of<AppState>(context);
+
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 10.0),
       child: Material(

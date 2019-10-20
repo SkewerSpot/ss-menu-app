@@ -85,7 +85,7 @@ class MenuItemCard extends StatelessWidget {
                     } else {
                       var appState = Provider.of<AppState>(context);
                       appState.addItemToCart(OrderItem(
-                        name: this.item.name,
+                        name: '${this.item.name} ${this.item.category}',
                         category: this.item.category,
                         isNonVeg: this.item.isNonVeg,
                         price: this.item.price,

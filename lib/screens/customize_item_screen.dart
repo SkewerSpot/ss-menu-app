@@ -47,7 +47,8 @@ class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
                 : 0.0);
         var appState = Provider.of<AppState>(context);
         appState.addItemToCart(OrderItem(
-          name: this.widget.item.name,
+          name:
+              '${this.selectedType.name} ${this.widget.item.name} ${this.widget.item.category}',
           category: this.widget.item.category,
           isNonVeg: this.widget.item.isNonVeg,
           price: totalPrice,

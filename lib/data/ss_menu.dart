@@ -10,7 +10,7 @@ var dSSMenu = [
         name: 'Nutri Kulcha',
         category: '',
         isNonVeg: false,
-        price: 100,
+        price: 99,
       ),
       MenuItem(
         name: 'Palak Chaamp Kulcha',
@@ -22,7 +22,7 @@ var dSSMenu = [
         name: 'Nutri Rice',
         category: '',
         isNonVeg: false,
-        price: 80,
+        price: 99,
       ),
       MenuItem(
         name: 'Masala Idli',

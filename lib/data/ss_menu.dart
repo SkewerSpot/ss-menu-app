@@ -82,31 +82,31 @@ var dSSMenu = [
         name: 'Choley Bhature',
         category: '',
         isNonVeg: false,
-        price: 75,
+        price: 50,
       ),
       MenuItem(
         name: 'Aloo Naan',
         category: '',
         isNonVeg: false,
-        price: 70,
+        price: 50,
       ),
       MenuItem(
         name: 'Gobi Naan',
         category: '',
         isNonVeg: false,
-        price: 80,
+        price: 60,
       ),
       MenuItem(
         name: 'Mix Naan',
         category: '',
         isNonVeg: false,
-        price: 80,
+        price: 60,
       ),
       MenuItem(
         name: 'Paneer Naan',
         category: '',
         isNonVeg: false,
-        price: 90,
+        price: 70,
       ),
       MenuItem(
         name: 'Extra Pav',
@@ -351,7 +351,7 @@ var dSSMenu = [
         name: 'Onion [set of 2]',
         category: 'Vada Pav',
         isNonVeg: false,
-        price: 80,
+        price: 99,
       ),
       MenuItem(
         name: 'SkewerSpecial [set of 2]',
@@ -438,7 +438,7 @@ var dSSMenu = [
         name: 'Loaded Cheesy Fries',
         category: '',
         isNonVeg: false,
-        price: 90,
+        price: 140,
       ),
       MenuItem(
         name: 'Potato Tornado',
@@ -468,7 +468,7 @@ var dSSMenu = [
         types: [
           MenuItemType(
             name: 'Regular',
-            price: 80,
+            price: 90,
           ),
         ],
         syrups: [
@@ -711,7 +711,13 @@ var dSSMenu = [
         price: 60.0,
       ),
       MenuItem(
-        name: 'Coke/Sprite',
+        name: 'Coke 350ml',
+        category: '',
+        isNonVeg: false,
+        price: 30.0,
+      ),
+      MenuItem(
+        name: 'Sprite 350ml',
         category: '',
         isNonVeg: false,
         price: 30.0,
@@ -720,7 +726,7 @@ var dSSMenu = [
         name: 'Mineral Water (1 ltr)',
         category: '',
         isNonVeg: false,
-        price: 30.0,
+        price: 20.0,
       ),
     ],
   ),

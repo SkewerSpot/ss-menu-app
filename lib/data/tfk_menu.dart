@@ -70,31 +70,31 @@ var dTFKMenu = [
         name: 'Choley Bhature',
         category: '',
         isNonVeg: false,
-        price: 75,
+        price: 50,
       ),
       MenuItem(
         name: 'Aloo Naan',
         category: '',
         isNonVeg: false,
-        price: 70,
+        price: 50,
       ),
       MenuItem(
         name: 'Gobi Naan',
         category: '',
         isNonVeg: false,
-        price: 80,
+        price: 60,
       ),
       MenuItem(
         name: 'Mix Naan',
         category: '',
         isNonVeg: false,
-        price: 80,
+        price: 60,
       ),
       MenuItem(
         name: 'Paneer Naan',
         category: '',
         isNonVeg: false,
-        price: 90,
+        price: 70,
       ),
       MenuItem(
         name: 'Extra Pav',
@@ -536,7 +536,7 @@ var dTFKMenu = [
     items: [
       MenuItem(
         name: 'Malai',
-        category: '',
+        category: 'Chaap',
         isNonVeg: false,
         types: [
           MenuItemType(
@@ -551,7 +551,7 @@ var dTFKMenu = [
       ),
       MenuItem(
         name: 'Afghani',
-        category: '',
+        category: 'Chaap',
         isNonVeg: false,
         types: [
           MenuItemType(
@@ -566,7 +566,7 @@ var dTFKMenu = [
       ),
       MenuItem(
         name: 'Achaari',
-        category: '',
+        category: 'Chaap',
         isNonVeg: false,
         types: [
           MenuItemType(
@@ -581,7 +581,7 @@ var dTFKMenu = [
       ),
       MenuItem(
         name: 'Irani',
-        category: '',
+        category: 'Chaap',
         isNonVeg: false,
         types: [
           MenuItemType(

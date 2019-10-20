@@ -8,7 +8,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="ss_menu"
+        android:label="SS Menu"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
@@ -30,4 +30,6 @@
             </intent-filter>
         </activity>
     </application>
+    
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

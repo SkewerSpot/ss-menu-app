@@ -95,16 +95,20 @@ class CartScreen extends StatelessWidget {
                                 height: 10.0,
                               ),
                               Expanded(
-                                child: ListView.separated(
+                                child: ListView.builder(
                                   itemCount: appState.getCartSize(),
                                   itemBuilder: (context, itemIndex) {
-                                    return OrderItemCard(
-                                      key: UniqueKey(),
-                                      item: appState.itemsInCart[itemIndex],
+                                    return Column(
+                                      children: <Widget>[
+                                        OrderItemCard(
+                                          key: UniqueKey(),
+                                          item: appState.itemsInCart[itemIndex],
+                                        ),
+                                        SizedBox(
+                                          height: 15.0,
+                                        )
+                                      ],
                                     );
-                                  },
-                                  separatorBuilder: (context, itemIndex) {
-                                    return SizedBox(height: 15.0);
                                   },
                                 ),
                               ),

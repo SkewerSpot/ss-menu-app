@@ -4,6 +4,9 @@ import 'package:provider/provider.dart';
 import 'package:ss_menu/models/app_state.dart';
 import 'package:ss_menu/screens/cart_screen.dart';
 
+/// An [AppBar]-like widget typically shown at the top of a screen.
+///
+/// Displays (optionally) a back button, app's brand name, and cart button.
 class ScreenTopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

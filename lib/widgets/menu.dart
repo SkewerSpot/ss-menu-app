@@ -4,6 +4,9 @@ import 'package:ss_menu/data/outlets.dart';
 import 'package:ss_menu/models/app_state.dart';
 import 'package:ss_menu/widgets/menu_section.dart';
 
+/// A container for multiple [MenuSection]s.
+///
+/// The parent widget to hold full menu for an outlet.
 class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

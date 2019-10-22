@@ -2,6 +2,7 @@ import 'package:ss_menu/models/menu_item_category.dart';
 import 'package:ss_menu/models/menu_item.dart';
 import 'package:ss_menu/models/menu_item_type.dart';
 
+/// Food menu for The Foodie Kitchen, Jalandhar, India.
 var dTFKMenu = [
   MenuItemCategory(
     name: 'All-Day Meals',

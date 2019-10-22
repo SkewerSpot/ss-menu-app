@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ss_menu/constants.dart';
 
+/// Displays a wrapped list of addons as tiny outlined boxes.
+///
+/// Useful when displaying list of selected syrups and toppings
+/// for an [OrderItem] in cart.
 class AddonList extends StatelessWidget {
+  /// List of addon names.
   final List<String> addons;
 
   AddonList({@required this.addons});

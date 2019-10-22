@@ -2,10 +2,29 @@ import 'package:flutter/foundation.dart';
 import 'menu_item.dart';
 import 'menu_item_type.dart';
 
+/// Data class to represent item in cart.
+///
+/// A [MenuItem] is ideally converted to an [OrderItem]
+/// when adding item from menu to cart.
 class OrderItem extends MenuItem {
+  /// Sequence number of item in its category.
   final int sequenceNum;
+
+  /// A [MenuItem] may have multiple types/variants.
+  /// This prop holds the user-selected type.
   final MenuItemType selectedType;
+
+  /// *DEPRECATED* Not in use.
+  ///
+  /// Whether the item is to be complimented with an ice cream scoop.
   final bool withIceCream;
+
+  /// Whether the item has been prepared.
+  ///
+  /// A [CustomerOrder] has [isCompleted] prop that represents
+  /// the doneness of the whole order. [OrderItem]'s [isDone] prop
+  /// represents the doneness of its item only.
+  /// Useful to track the doneness of individual items in an order.
   final bool isDone;
 
   OrderItem({
@@ -36,6 +55,8 @@ class OrderItem extends MenuItem {
           inclusions: inclusions,
         );
 
+  /// Returns a [Map] representation of the object,
+  /// that can be used as a serialized form for sending to Firebase.
   Map<String, dynamic> toMap() {
     return {
       'name': this.name,

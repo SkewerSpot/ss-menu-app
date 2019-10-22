@@ -6,7 +6,12 @@ import 'package:ss_menu/models/menu_item.dart';
 import 'package:ss_menu/models/order_item.dart';
 import 'package:ss_menu/screens/customize_item_screen.dart';
 
+/// A card to visually represent a [MenuItem].
+///
+/// Displays item's name, price, description and
+/// a button to add item to cart.
 class MenuItemCard extends StatelessWidget {
+  /// Item to display in card.
   final MenuItem item;
 
   MenuItemCard({

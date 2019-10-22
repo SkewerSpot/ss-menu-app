@@ -4,7 +4,15 @@ import 'package:ss_menu/models/app_state.dart';
 import 'package:ss_menu/models/order_item.dart';
 import 'package:ss_menu/widgets/addon_list.dart';
 
+/// Widget to display an [OrderItem].
+///
+/// Displays item name (final name may be different from value in [MenuItem]),
+/// selected syrups and toppings, price, and a button to
+/// remove item from cart.
+///
+/// Usually used to show an item in cart.
 class OrderItemCard extends StatelessWidget {
+  /// The item to display in card.
   final OrderItem item;
 
   OrderItemCard({

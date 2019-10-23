@@ -6,6 +6,20 @@
 
 A fast, slick and modern menu app for taking restaurant orders.
 
+#### Table of contents
+
+- [History](#history)
+- [Current Design](#current-design)
+- [Features](#features)
+- [Caveats](#caveats)
+- [Why You Should Use It?](#why-you-should-use-it)
+- [Getting Started](#getting-started)
+- [Building](#building)
+- [Distributing](#distributing)
+- [Screenshots](#screenshots)
+- [Credits](#credits)
+- [Contact](#contact)
+
 ## History
 
 This app was originally written in [Ionic/Angular](https://ionicframework.com/) for a small cafe
@@ -52,6 +66,10 @@ As there's good, so there's bad. The app is far from perfect. Here I list down j
 - There's a whole bunch of hardcodings (currency unit, menus, outlets, etc.)
 - iOS version is missing
 - Several parts of UI/UX have rooms for improvement
+- No special arrangements for accessibility
+- Missing i18n (internationlization) and l10n (localization)
+- No automated tests (_bummer!_)
+- No CI/CD
 
 ## Why You Should Use It?
 
@@ -61,15 +79,16 @@ With all its quirks, is it good enough? Well, let's see some usecases that may f
 2. You want to create a better solution using this one as your base.
 3. You want to learn to create Flutter apps with some kind of state management, integration with Firebase, and highly custom UI/UX. This repo's commit history is pretty well-structure for this purpose.
 
-## Setting Up Dev Enviroment
+## Getting Started
 
-1. Install Flutter (read the official docs).
+1. Install Flutter (read the official docs). Ensure Android SDK support: let `flutter doctor` help you with that.
 2. Install Flutter/Dart support in your IDE. I use Visual Studio Code.
 3. Clone this repo locally.
 4. Open the repo directory in your IDE. It should ideally automatically fetch missing dependencies (packages) for you. If not, run the command `flutter pub get`.
-5. Run the app (press F5) in Android Simulator (API 28; Google APIs Intel x64 image).
-6. Tada! It's up and running.
-7. Drop me a line if you face an issue. (contact details below)
+5. Create a new Firebase realtime database. Follow the [steps for adding an Android app](https://firebase.google.com/docs/android/setup). Download `google-services.json` file and add it under **android/app** folder. (skip the parts about adding Firebase SDK)
+6. Run the app (press F5) in Android Simulator (API 28; Google APIs Intel x64 image).
+7. Tada! It's up and running.
+8. Drop me a line if you face an issue. (contact details below)
 
 ## Building
 
@@ -102,6 +121,11 @@ Once the APK is built, install it on your/client's/friend's Android phone either
     <img height=400 src="https://user-images.githubusercontent.com/1288616/67282975-71cb7b80-f4f0-11e9-9666-35a7db94e362.png" alt="Screenshot of Confirm Order screen" />
 
 </p>
+
+## Credits
+
+- Logo icon made by [Freepik](https://www.freepik.com/home) from www.flaticon.com
+- Design mockup by [Ben Tortorelli](https://dribbble.com/iamben) from Dribbble
 
 ## Contact
 

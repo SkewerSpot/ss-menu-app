@@ -211,6 +211,8 @@ var dSSMenu = [
         name: 'Make Your Own',
         category: 'Waffle',
         isNonVeg: false,
+        freeSyrups: 2,
+        freeToppings: 2,
         types: [
           MenuItemType(
             name: 'Regular Stick Regular Base',
@@ -445,6 +447,7 @@ var dSSMenu = [
         name: 'Potato Tornado',
         category: '',
         isNonVeg: false,
+        freeSyrups: 1,
         types: [
           MenuItemType(
             name: 'Regular',
@@ -466,6 +469,7 @@ var dSSMenu = [
         name: 'Potato Twisters',
         category: '',
         isNonVeg: false,
+        freeSyrups: 1,
         types: [
           MenuItemType(
             name: 'Regular',

@@ -27,6 +27,12 @@ class MenuItem extends Item {
   /// List of supported toppings.
   final List<String> toppings;
 
+  /// Number of syrups offered complimentary with the item
+  final int freeSyrups;
+
+  /// Number of toppings offered complimentary with the item
+  final int freeToppings;
+
   /// List of constituents of a combo or meal.
   /// A better alternative to [description] for combos.
   final List<String> inclusions;
@@ -41,6 +47,8 @@ class MenuItem extends Item {
     this.description,
     this.syrups,
     this.toppings,
+    this.freeSyrups = 0,
+    this.freeToppings = 0,
     this.inclusions,
   }) : super(
           name: name,

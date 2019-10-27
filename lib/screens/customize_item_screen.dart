@@ -39,11 +39,14 @@ class _CustomizeItemScreenState extends State<CustomizeItemScreen> {
       screenActionText: 'Add to cart',
       onScreenActionPressed: () {
         double totalPrice = this.selectedType.price +
-            (this.selectedSyrups.length > 2
-                ? (this.selectedSyrups.length - 2) * kExtraSyrupPrice
+            (this.selectedSyrups.length > this.widget.item.freeSyrups
+                ? (this.selectedSyrups.length - this.widget.item.freeSyrups) *
+                    kExtraSyrupPrice
                 : 0.0) +
-            (this.selectedToppings.length > 2
-                ? (this.selectedToppings.length - 2) * kExtraToppingPrice
+            (this.selectedToppings.length > this.widget.item.freeToppings
+                ? (this.selectedToppings.length -
+                        this.widget.item.freeToppings) *
+                    kExtraToppingPrice
                 : 0.0);
         var appState = Provider.of<AppState>(context);
         appState.addItemToCart(OrderItem(

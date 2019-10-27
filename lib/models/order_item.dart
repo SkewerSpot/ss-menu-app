@@ -37,6 +37,8 @@ class OrderItem extends MenuItem {
     String description,
     List<String> syrups,
     List<String> toppings,
+    int freeSyrups,
+    int freeToppings,
     List<String> inclusions,
     this.sequenceNum = 0,
     this.selectedType,
@@ -52,6 +54,8 @@ class OrderItem extends MenuItem {
           description: description,
           syrups: syrups,
           toppings: toppings,
+          freeSyrups: freeSyrups,
+          freeToppings: freeToppings,
           inclusions: inclusions,
         );
 

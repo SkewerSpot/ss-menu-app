@@ -38,26 +38,30 @@ class MenuItemCard extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    item.name,
-                    textAlign: TextAlign.start,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18.0,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      item.name,
+                      textAlign: TextAlign.start,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18.0,
+                      ),
                     ),
-                  ),
-                  Text(
-                    '₹ ${price.toString()}',
-                    textAlign: TextAlign.start,
-                    style: TextStyle(
-                      fontSize: 14.0,
+                    Text(
+                      '₹ ${price.toString()}',
+                      textAlign: TextAlign.start,
+                      style: TextStyle(
+                        fontSize: 14.0,
+                      ),
                     ),
-                  ),
-                  isCustomizable ? Text('customizations available') : Text(''),
-                ],
+                    isCustomizable
+                        ? Text('customizations available')
+                        : Text(''),
+                  ],
+                ),
               ),
               Container(
                 width: 35.0,

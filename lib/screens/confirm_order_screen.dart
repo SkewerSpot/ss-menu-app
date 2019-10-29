@@ -87,7 +87,12 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
           RadioTileList(
             options: kChannels,
             onChanged: (Map<String, String> option) {
-              this.setState(() => this.selectedChannel = option.keys.first);
+              this.setState(() {
+                var channel = option.keys.first;
+                this.selectedChannel = channel;
+                this.selectedTaxOption =
+                    channel == 'instore' ? 'inclusive' : 'exclusive';
+              });
             },
             selectedValue: this.selectedChannel,
             showSubtitle: false,

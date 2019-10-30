@@ -209,6 +209,22 @@ var dTFKMenu = [
         inclusions: [
           'Dal Makhani',
           'Paneer Butter Masala / Malai Kofta',
+          'Mix Veg',
+          'Pulao',
+          'Raita',
+          '2 Lachha Parantha / 2 Butter Naan',
+          'Salad',
+          'Brownie',
+        ],
+      ),
+      MenuItem(
+        name: 'Monster Hunger',
+        category: 'Thali',
+        isNonVeg: false,
+        price: 300.0,
+        inclusions: [
+          'Dal Makhani',
+          'Paneer Butter Masala / Malai Kofta',
           'Chana Masala',
           'Mix Veg',
           'Pulao',

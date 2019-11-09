@@ -14,12 +14,6 @@ var dSSMenu = [
         price: 99,
       ),
       MenuItem(
-        name: 'Palak Chaamp Kulcha',
-        category: '',
-        isNonVeg: false,
-        price: 150,
-      ),
-      MenuItem(
         name: 'Nutri Rice',
         category: '',
         isNonVeg: false,
@@ -44,12 +38,6 @@ var dSSMenu = [
         price: 90,
       ),
       MenuItem(
-        name: 'Cheese Pav Bhaji',
-        category: '',
-        isNonVeg: false,
-        price: 120,
-      ),
-      MenuItem(
         name: 'Chinese Idli',
         category: '',
         isNonVeg: false,
@@ -68,43 +56,31 @@ var dSSMenu = [
         price: 160,
       ),
       MenuItem(
-        name: 'Veggie Grilled Marine',
-        category: '',
-        isNonVeg: false,
-        price: 80,
-      ),
-      MenuItem(
-        name: 'Paneer Grilled Marine',
-        category: '',
-        isNonVeg: false,
-        price: 90,
-      ),
-      MenuItem(
         name: 'Choley Bhature',
         category: '',
         isNonVeg: false,
         price: 50,
       ),
       MenuItem(
-        name: 'Aloo Naan',
+        name: 'Aloo Naan Plate',
         category: '',
         isNonVeg: false,
         price: 50,
       ),
       MenuItem(
-        name: 'Gobi Naan',
+        name: 'Gobi Naan Plate',
         category: '',
         isNonVeg: false,
         price: 60,
       ),
       MenuItem(
-        name: 'Mix Naan',
+        name: 'Mix Naan Plate',
         category: '',
         isNonVeg: false,
         price: 60,
       ),
       MenuItem(
-        name: 'Paneer Naan',
+        name: 'Paneer Naan Plate',
         category: '',
         isNonVeg: false,
         price: 70,
@@ -268,31 +244,9 @@ var dSSMenu = [
           'Choco Chips',
           'Brownie Bits',
           'Gems',
+          'Marshmallow',
         ],
       )
-    ],
-  ),
-  MenuItemCategory(
-    name: 'Pizza',
-    items: [
-      MenuItem(
-        name: 'Simply Veg',
-        category: 'Pizza',
-        isNonVeg: false,
-        price: 190,
-      ),
-      MenuItem(
-        name: 'Mushroom Corn',
-        category: 'Pizza',
-        isNonVeg: false,
-        price: 200,
-      ),
-      MenuItem(
-        name: 'Paneer Tikka',
-        category: 'Pizza',
-        isNonVeg: false,
-        price: 210,
-      ),
     ],
   ),
   MenuItemCategory(
@@ -321,17 +275,6 @@ var dSSMenu = [
         category: 'Pasta',
         isNonVeg: false,
         price: 200,
-      ),
-    ],
-  ),
-  MenuItemCategory(
-    name: 'Sides',
-    items: [
-      MenuItem(
-        name: 'Garlic Bread [4pc]',
-        category: 'Sides',
-        isNonVeg: false,
-        price: 90,
       ),
     ],
   ),
@@ -365,54 +308,13 @@ var dSSMenu = [
     ],
   ),
   MenuItemCategory(
-    name: 'Burger',
-    items: [
-      MenuItem(
-        name: 'Classic Potato',
-        category: 'Burger',
-        isNonVeg: false,
-        price: 50,
-      ),
-      MenuItem(
-        name: 'Double Patty',
-        category: 'Burger',
-        isNonVeg: false,
-        price: 80,
-      ),
-      MenuItem(
-        name: 'Big Daddy',
-        category: 'Burger',
-        isNonVeg: false,
-        price: 99,
-      ),
-      MenuItem(
-        name: 'Spicylicious',
-        category: 'Burger',
-        isNonVeg: false,
-        price: 99,
-      ),
-    ],
-  ),
-  MenuItemCategory(
     name: 'Wrap',
     items: [
-      MenuItem(
-        name: 'Potato Masala',
-        category: 'Wrap',
-        isNonVeg: false,
-        price: 70,
-      ),
       MenuItem(
         name: 'Veggie Delight',
         category: 'Wrap',
         isNonVeg: false,
         price: 90,
-      ),
-      MenuItem(
-        name: 'Spicy Mushroom',
-        category: 'Wrap',
-        isNonVeg: false,
-        price: 110,
       ),
       MenuItem(
         name: 'Paneer Tikka',
@@ -438,12 +340,6 @@ var dSSMenu = [
         price: 70,
       ),
       MenuItem(
-        name: 'Loaded Cheesy Fries',
-        category: '',
-        isNonVeg: false,
-        price: 140,
-      ),
-      MenuItem(
         name: 'Potato Tornado',
         category: '',
         isNonVeg: false,
@@ -451,7 +347,7 @@ var dSSMenu = [
         types: [
           MenuItemType(
             name: 'Regular',
-            price: 70,
+            price: 80,
           ),
         ],
         syrups: [
@@ -473,7 +369,7 @@ var dSSMenu = [
         types: [
           MenuItemType(
             name: 'Regular',
-            price: 90,
+            price: 100,
           ),
         ],
         syrups: [
@@ -496,36 +392,110 @@ var dSSMenu = [
         name: 'Pasta Meal',
         category: 'Combo',
         isNonVeg: false,
-        price: 300,
+        price: 240,
         inclusions: [
           'Red/White Sauce Pasta',
-          'Tornado',
+          'Garlic Bread (3pc)',
           'Coke',
-          'Brownie (small)',
         ],
       ),
       MenuItem(
         name: 'Wrap Meal',
         category: 'Combo',
         isNonVeg: false,
-        price: 300,
+        price: 200,
         inclusions: [
-          'Paneer Wrap',
-          'French Fries',
+          'Paneer Tikka Wrap',
+          'Potato Twisters',
           'Coke',
-          'Stick Waffle (regular)',
         ],
       ),
       MenuItem(
-        name: 'Pizza Meal',
+        name: 'Masala Idli Meal',
         category: 'Combo',
         isNonVeg: false,
-        price: 330,
+        price: 150,
         inclusions: [
-          'Any Pizza',
-          'Garlic Bread (3pc)',
-          'Coke',
+          'Masala Idli',
           'Brownie (small)',
+          'Coke',
+        ],
+      ),
+      MenuItem(
+        name: 'Nutri Rice Meal',
+        category: 'Combo',
+        isNonVeg: false,
+        price: 170,
+        inclusions: [
+          'Nutri Rice',
+          'Brownie (small)',
+          'Coke',
+        ],
+      ),
+      MenuItem(
+        name: 'Nutri Kulcha & Stick Waffle',
+        category: 'Combo',
+        isNonVeg: false,
+        price: 210,
+        inclusions: [
+          'Nutri Kulcha (2pc)',
+          'Regular Stick Waffle',
+          'Coke',
+        ],
+      ),
+      MenuItem(
+        name: 'Pav Bhaji & Stick Waffle',
+        category: 'Combo',
+        isNonVeg: false,
+        price: 200,
+        inclusions: [
+          'Pav Bhaji',
+          'Regular Stick Waffle',
+          'Coke',
+        ],
+      ),
+      MenuItem(
+        name: 'Vada Pav & Fries',
+        category: 'Combo',
+        isNonVeg: false,
+        price: 160,
+        inclusions: [
+          'Nutri Kulcha (2pc)',
+          'Regular Stick Waffle',
+          'Coke',
+        ],
+      ),
+      MenuItem(
+        name: 'Waffle & Fries',
+        category: 'Combo',
+        isNonVeg: false,
+        price: 200,
+        inclusions: [
+          'Day and Night Classic Waffle',
+          'French Fries',
+          'Coke',
+        ],
+      ),
+      MenuItem(
+        name: 'Waffle & Twisters',
+        category: 'Combo',
+        isNonVeg: false,
+        price: 210,
+        inclusions: [
+          'Day and Night Classic Waffle',
+          'Potato Twisters',
+          'Coke',
+        ],
+      ),
+      MenuItem(
+        name: 'Waffle & Vada Pav',
+        category: 'Combo',
+        isNonVeg: false,
+        price: 200,
+        inclusions: [
+          'Day and Night Classic Waffle',
+          'Vada Pav (set of 2)',
+          'Coke',
         ],
       ),
     ],

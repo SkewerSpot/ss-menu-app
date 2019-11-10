@@ -5,168 +5,114 @@ import 'package:ss_menu/models/menu_item_type.dart';
 /// Food menu for The Foodie Kitchen, Jalandhar, India.
 var dTFKMenu = [
   MenuItemCategory(
-    name: 'All-Day Meals',
+    name: 'Roti Combos',
     items: [
       MenuItem(
-        name: 'Bheeja Kulcha (2pc)',
+        name: 'Chana Masala Roti Box',
         category: '',
         isNonVeg: false,
-        price: 80,
+        price: 130,
       ),
       MenuItem(
-        name: 'Nutri Kulcha',
+        name: 'Dal Makhani Roti Box',
         category: '',
         isNonVeg: false,
-        price: 99,
+        price: 130,
       ),
       MenuItem(
-        name: 'Nutri Rice',
+        name: 'Dal Makhani Parantha Box',
         category: '',
         isNonVeg: false,
-        price: 99,
+        price: 150,
       ),
       MenuItem(
-        name: 'Masala Idli',
+        name: 'Dal Makhani Naan Box',
         category: '',
         isNonVeg: false,
-        price: 80,
+        price: 150,
       ),
       MenuItem(
-        name: 'Popular Pav Bhaji',
+        name: 'Mushroom Masala Roti Box',
         category: '',
         isNonVeg: false,
-        price: 90,
+        price: 150,
       ),
       MenuItem(
-        name: 'Cheese Pav Bhaji',
-        category: '',
-        isNonVeg: false,
-        price: 120,
-      ),
-      MenuItem(
-        name: 'Cheesy Grilled S/W [4pc]',
-        category: '',
-        isNonVeg: false,
-        price: 140,
-      ),
-      MenuItem(
-        name: 'Paneer Grilled S/W [4pc]',
+        name: 'Palak Paneer Parantha Box',
         category: '',
         isNonVeg: false,
         price: 160,
       ),
       MenuItem(
-        name: 'Veggie Grilled Marine',
+        name: 'Shahi Paneer Naan Box',
         category: '',
         isNonVeg: false,
-        price: 80,
+        price: 160,
       ),
       MenuItem(
-        name: 'Paneer Grilled Marine',
+        name: 'Kadhai Paneer Naan Box',
         category: '',
         isNonVeg: false,
-        price: 90,
+        price: 170,
       ),
       MenuItem(
-        name: 'Choley Bhature',
+        name: 'Malai Kofta Parantha Box',
         category: '',
         isNonVeg: false,
-        price: 50,
+        price: 170,
       ),
       MenuItem(
-        name: 'Aloo Naan',
+        name: 'Palak Chana Naan Box',
         category: '',
         isNonVeg: false,
-        price: 50,
+        price: 170,
       ),
       MenuItem(
-        name: 'Gobi Naan',
+        name: 'Tawa Chaamp Naan Box',
         category: '',
         isNonVeg: false,
-        price: 60,
-      ),
-      MenuItem(
-        name: 'Mix Naan',
-        category: '',
-        isNonVeg: false,
-        price: 60,
-      ),
-      MenuItem(
-        name: 'Paneer Naan',
-        category: '',
-        isNonVeg: false,
-        price: 70,
-      ),
-      MenuItem(
-        name: 'Extra Pav',
-        category: '',
-        isNonVeg: false,
-        price: 10,
-      ),
-      MenuItem(
-        name: 'Extra Butter Pav',
-        category: '',
-        isNonVeg: false,
-        price: 15,
-      ),
-      MenuItem(
-        name: 'Extra Kulcha',
-        category: '',
-        isNonVeg: false,
-        price: 10,
+        price: 170,
       ),
     ],
   ),
   MenuItemCategory(
-    name: '1-Pot Meals',
+    name: 'Rice Combos',
     items: [
       MenuItem(
-        name: 'Chole Rice',
+        name: 'Nutri Rice Box',
         category: '',
         isNonVeg: false,
-        price: 150,
+        price: 100,
       ),
       MenuItem(
-        name: 'Rajma Rice',
+        name: 'Veg Pulao Box',
         category: '',
         isNonVeg: false,
-        price: 150,
+        price: 130,
       ),
       MenuItem(
-        name: 'Kadhi Pakoda Rice',
+        name: 'Dal Makhani Rice Box',
         category: '',
         isNonVeg: false,
-        price: 150,
+        price: 130,
       ),
       MenuItem(
-        name: 'Veg Pulao Raita',
+        name: 'Choley Rice Box',
         category: '',
         isNonVeg: false,
-        price: 150,
+        price: 130,
       ),
       MenuItem(
-        name: 'Chilli Paneer w/ Chowmein',
+        name: 'Rajma Rice Box',
         category: '',
         isNonVeg: false,
-        price: 170,
+        price: 130,
       ),
       MenuItem(
-        name: 'Chilli Paneer w/ Fried Rice',
+        name: 'Kadhi Pakoda Rice Box',
         category: '',
         isNonVeg: false,
-        price: 170,
-      ),
-      MenuItem(
-        name: 'Manchurian w/ Chowmein',
-        category: '',
-        isNonVeg: false,
-        price: 170,
-      ),
-      MenuItem(
-        name: 'Manchurian w/ Fried Rice',
-        category: '',
-        isNonVeg: false,
-        price: 170,
+        price: 130,
       ),
     ],
   ),
@@ -192,11 +138,11 @@ var dTFKMenu = [
         price: 190.0,
         inclusions: [
           'Dal Makhani',
-          'Shahi Paneer / Malai Kofta',
+          'Shahi Paneer',
           'Mix Veg',
-          'Pulao',
           'Raita',
-          '2 Lachha Parantha / 2 Butter Naan / 3 Tandoori Roti',
+          '2 Tandoori Roti',
+          'Rice',
           'Salad',
           'Brownie',
         ],
@@ -208,11 +154,12 @@ var dTFKMenu = [
         price: 240.0,
         inclusions: [
           'Dal Makhani',
-          'Paneer Butter Masala / Malai Kofta',
+          'Shahi Paneer',
           'Mix Veg',
           'Pulao',
           'Raita',
-          '2 Lachha Parantha / 2 Butter Naan',
+          '1 Lachha Parantha',
+          '1 Butter Naan',
           'Salad',
           'Brownie',
         ],
@@ -224,12 +171,13 @@ var dTFKMenu = [
         price: 300.0,
         inclusions: [
           'Dal Makhani',
-          'Paneer Butter Masala / Malai Kofta',
+          'Shahi Paneer',
           'Chana Masala',
           'Mix Veg',
           'Pulao',
           'Raita',
-          '2 Lachha Parantha + 2 Butter Naan',
+          '2 Lachha Parantha',
+          '2 Butter Naan',
           'Salad',
           'Brownie',
         ],
@@ -237,37 +185,146 @@ var dTFKMenu = [
     ],
   ),
   MenuItemCategory(
-    name: 'Main Course',
+    name: 'Chinese Combos',
+    items: [
+      MenuItem(
+        name: 'Fried Rice Manchurian Box',
+        category: '',
+        isNonVeg: false,
+        price: 170,
+      ),
+      MenuItem(
+        name: 'Fried Rice Chilli Paneer Box',
+        category: '',
+        isNonVeg: false,
+        price: 170,
+      ),
+      MenuItem(
+        name: 'Chowmein Manchurian Box',
+        category: '',
+        isNonVeg: false,
+        price: 170,
+      ),
+      MenuItem(
+        name: 'Chowmein Chilli Paneer Box',
+        category: '',
+        isNonVeg: false,
+        price: 170,
+      ),
+      MenuItem(
+        name: 'Garlic Noodles Manchurian Box',
+        category: '',
+        isNonVeg: false,
+        price: 180,
+      ),
+      MenuItem(
+        name: 'Garlic Noodles Chilli Paneer Box',
+        category: '',
+        isNonVeg: false,
+        price: 180,
+      ),
+    ],
+  ),
+  MenuItemCategory(
+    name: 'All-Day Meals',
+    items: [
+      MenuItem(
+        name: 'Bheeja Kulcha (2pc)',
+        category: '',
+        isNonVeg: false,
+        price: 80,
+      ),
+      MenuItem(
+        name: 'Nutri Kulcha',
+        category: '',
+        isNonVeg: false,
+        price: 100,
+      ),
+      MenuItem(
+        name: 'Choley Bhature',
+        category: '',
+        isNonVeg: false,
+        price: 50,
+      ),
+      MenuItem(
+        name: 'Aloo Naan Plate',
+        category: '',
+        isNonVeg: false,
+        price: 50,
+      ),
+      MenuItem(
+        name: 'Gobi Naan Plate',
+        category: '',
+        isNonVeg: false,
+        price: 60,
+      ),
+      MenuItem(
+        name: 'Mix Naan Plate',
+        category: '',
+        isNonVeg: false,
+        price: 60,
+      ),
+      MenuItem(
+        name: 'Paneer Naan Plate',
+        category: '',
+        isNonVeg: false,
+        price: 70,
+      ),
+      MenuItem(
+        name: 'Extra Pav',
+        category: '',
+        isNonVeg: false,
+        price: 10,
+      ),
+      MenuItem(
+        name: 'Extra Butter Pav',
+        category: '',
+        isNonVeg: false,
+        price: 15,
+      ),
+      MenuItem(
+        name: 'Extra Kulcha',
+        category: '',
+        isNonVeg: false,
+        price: 10,
+      ),
+    ],
+  ),
+  MenuItemCategory(
+    name: 'Main Course (Indian)',
     items: [
       MenuItem(
         name: 'Dal Makhani',
         category: '',
         isNonVeg: false,
-        price: 170.0,
+        types: [
+          MenuItemType(
+            name: 'Half',
+            price: 100.0,
+          ),
+          MenuItemType(
+            name: 'Full',
+            price: 170.0,
+          ),
+        ],
       ),
       MenuItem(
         name: 'Dal Tadaka (Yellow)',
         category: '',
         isNonVeg: false,
-        price: 150.0,
-      ),
-      MenuItem(
-        name: 'Shahi Paneer',
-        category: '',
-        isNonVeg: false,
         types: [
           MenuItemType(
             name: 'Half',
-            price: 140.0,
+            price: 90.0,
           ),
           MenuItemType(
             name: 'Full',
-            price: 220.0,
+            price: 150.0,
           ),
         ],
       ),
       MenuItem(
-        name: 'Cheese Tomato',
+        name: 'Shahi Paneer',
         category: '',
         isNonVeg: false,
         types: [
@@ -345,25 +402,61 @@ var dTFKMenu = [
         name: 'Mushroom Masala',
         category: '',
         isNonVeg: false,
-        price: 220.0,
+        types: [
+          MenuItemType(
+            name: 'Half',
+            price: 160.0,
+          ),
+          MenuItemType(
+            name: 'Full',
+            price: 240.0,
+          ),
+        ],
       ),
       MenuItem(
         name: 'Palak Mushroom',
         category: '',
         isNonVeg: false,
-        price: 180.0,
+        types: [
+          MenuItemType(
+            name: 'Half',
+            price: 100.0,
+          ),
+          MenuItemType(
+            name: 'Full',
+            price: 180.0,
+          ),
+        ],
       ),
       MenuItem(
         name: 'Malai Kofta',
         category: '',
         isNonVeg: false,
-        price: 220.0,
+        types: [
+          MenuItemType(
+            name: 'Half',
+            price: 160.0,
+          ),
+          MenuItemType(
+            name: 'Full',
+            price: 240.0,
+          ),
+        ],
       ),
       MenuItem(
         name: 'Palak Kofta',
         category: '',
         isNonVeg: false,
-        price: 180.0,
+        types: [
+          MenuItemType(
+            name: 'Half',
+            price: 100.0,
+          ),
+          MenuItemType(
+            name: 'Full',
+            price: 180.0,
+          ),
+        ],
       ),
       MenuItem(
         name: 'Chana Masala',
@@ -405,88 +498,25 @@ var dTFKMenu = [
         price: 160.0,
       ),
       MenuItem(
-        name: 'Palak Chaamp',
+        name: 'Tawa Chaamp',
         category: '',
         isNonVeg: false,
-        price: 160.0,
-      ),
-      MenuItem(
-        name: 'Masala Chaamp',
-        category: '',
-        isNonVeg: false,
-        price: 160.0,
+        types: [
+          MenuItemType(
+            name: 'Half',
+            price: 120.0,
+          ),
+          MenuItemType(
+            name: 'Full',
+            price: 200.0,
+          ),
+        ],
       ),
     ],
   ),
   MenuItemCategory(
-    name: 'Chinese',
+    name: 'Main Course (Chinese)',
     items: [
-      MenuItem(
-        name: 'Chilli Chana',
-        category: '',
-        isNonVeg: false,
-        types: [
-          MenuItemType(
-            name: 'Half',
-            price: 130.0,
-          ),
-          MenuItemType(
-            name: 'Full',
-            price: 220.0,
-          ),
-        ],
-      ),
-      MenuItem(
-        name: 'Chilli Paneer',
-        category: '',
-        isNonVeg: false,
-        types: [
-          MenuItemType(
-            name: 'Half',
-            price: 130.0,
-          ),
-          MenuItemType(
-            name: 'Full',
-            price: 220.0,
-          ),
-        ],
-      ),
-      MenuItem(
-        name: 'Gobi Manchurian',
-        category: '',
-        isNonVeg: false,
-        types: [
-          MenuItemType(
-            name: 'Half',
-            price: 130.0,
-          ),
-          MenuItemType(
-            name: 'Full',
-            price: 220.0,
-          ),
-        ],
-      ),
-      MenuItem(
-        name: 'Manchurian',
-        category: '',
-        isNonVeg: false,
-        types: [
-          MenuItemType(
-            name: 'Half',
-            price: 130.0,
-          ),
-          MenuItemType(
-            name: 'Full',
-            price: 220.0,
-          ),
-        ],
-      ),
-      MenuItem(
-        name: 'Honey Chilli Potato',
-        category: '',
-        isNonVeg: false,
-        price: 150.0,
-      ),
       MenuItem(
         name: 'Chowmein',
         category: '',
@@ -511,11 +541,116 @@ var dTFKMenu = [
         isNonVeg: false,
         price: 160.0,
       ),
+      MenuItem(
+        name: 'Chilli Chana',
+        category: '',
+        isNonVeg: false,
+        types: [
+          MenuItemType(
+            name: 'Half',
+            price: 130.0,
+          ),
+          MenuItemType(
+            name: 'Full',
+            price: 220.0,
+          ),
+        ],
+      ),
+      MenuItem(
+        name: 'Chilli Paneer (Gravy)',
+        category: '',
+        isNonVeg: false,
+        types: [
+          MenuItemType(
+            name: 'Half',
+            price: 130.0,
+          ),
+          MenuItemType(
+            name: 'Full',
+            price: 220.0,
+          ),
+        ],
+      ),
+      MenuItem(
+        name: 'Chilli Paneer (Dry)',
+        category: '',
+        isNonVeg: false,
+        types: [
+          MenuItemType(
+            name: 'Half',
+            price: 140.0,
+          ),
+          MenuItemType(
+            name: 'Full',
+            price: 230.0,
+          ),
+        ],
+      ),
+      MenuItem(
+        name: 'Manchurian (Gravy)',
+        category: '',
+        isNonVeg: false,
+        types: [
+          MenuItemType(
+            name: 'Half',
+            price: 130.0,
+          ),
+          MenuItemType(
+            name: 'Full',
+            price: 220.0,
+          ),
+        ],
+      ),
+      MenuItem(
+        name: 'Manchurian (Dry)',
+        category: '',
+        isNonVeg: false,
+        types: [
+          MenuItemType(
+            name: 'Half',
+            price: 140.0,
+          ),
+          MenuItemType(
+            name: 'Full',
+            price: 230.0,
+          ),
+        ],
+      ),
+      MenuItem(
+        name: 'Honey Chilli Potato',
+        category: '',
+        isNonVeg: false,
+        price: 150.0,
+      ),
     ],
   ),
   MenuItemCategory(
-    name: 'Tandoori Snacks',
+    name: 'Snacks',
     items: [
+      MenuItem(
+        name: 'Masala Idli',
+        category: '',
+        isNonVeg: false,
+        price: 80,
+      ),
+      MenuItem(
+        name: 'Popular Pav Bhaji',
+        category: '',
+        isNonVeg: false,
+        price: 90,
+      ),
+      MenuItem(
+        name: 'Cheesy Grilled S/W [4pc]',
+        category: '',
+        isNonVeg: false,
+        price: 140,
+      ),
+      MenuItem(
+        name: 'Paneer Grilled S/W [4pc]',
+        category: '',
+        isNonVeg: false,
+        price: 160,
+      ),
       MenuItem(
         name: 'Paneer Tikka',
         category: '',
@@ -546,14 +681,9 @@ var dTFKMenu = [
           ),
         ],
       ),
-    ],
-  ),
-  MenuItemCategory(
-    name: 'Chaap',
-    items: [
       MenuItem(
-        name: 'Malai',
-        category: 'Chaap',
+        name: 'Malai Chaap',
+        category: '',
         isNonVeg: false,
         types: [
           MenuItemType(
@@ -567,8 +697,8 @@ var dTFKMenu = [
         ],
       ),
       MenuItem(
-        name: 'Afghani',
-        category: 'Chaap',
+        name: 'Afghani Chaap',
+        category: '',
         isNonVeg: false,
         types: [
           MenuItemType(
@@ -582,67 +712,20 @@ var dTFKMenu = [
         ],
       ),
       MenuItem(
-        name: 'Achaari',
-        category: 'Chaap',
-        isNonVeg: false,
-        types: [
-          MenuItemType(
-            name: 'Half',
-            price: 90.0,
-          ),
-          MenuItemType(
-            name: 'Full',
-            price: 160.0,
-          ),
-        ],
-      ),
-      MenuItem(
-        name: 'Irani',
-        category: 'Chaap',
-        isNonVeg: false,
-        types: [
-          MenuItemType(
-            name: 'Half',
-            price: 90.0,
-          ),
-          MenuItemType(
-            name: 'Full',
-            price: 160.0,
-          ),
-        ],
-      ),
-    ],
-  ),
-  MenuItemCategory(
-    name: 'Roll',
-    items: [
-      MenuItem(
-        name: 'Aloo Masala',
-        category: 'Roll',
-        isNonVeg: false,
-        price: 90.0,
-      ),
-      MenuItem(
-        name: 'Veggie',
-        category: 'Roll',
+        name: 'Veggie Kathi Roll',
+        category: '',
         isNonVeg: false,
         price: 100.0,
       ),
       MenuItem(
-        name: 'Chilli Mushroom',
-        category: 'Roll',
-        isNonVeg: false,
-        price: 130.0,
-      ),
-      MenuItem(
-        name: 'Paneer Tikka',
-        category: 'Roll',
+        name: 'Paneer Tikka Kathi Roll',
+        category: '',
         isNonVeg: false,
         price: 140.0,
       ),
       MenuItem(
-        name: 'Chilli Paneer',
-        category: 'Roll',
+        name: 'Chilli Paneer Kathi Roll',
+        category: '',
         isNonVeg: false,
         price: 150.0,
       ),

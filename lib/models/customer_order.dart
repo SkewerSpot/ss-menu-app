@@ -120,7 +120,7 @@ class CustomerOrder {
     this.taxRateGST = kTaxRateGST,
     this.isInclusiveOfTaxes = false,
     @required this.source,
-  }) : this.timestamp = DateTime.now().toIso8601String();
+  }) : this.timestamp = DateTime.now().toUtc().toIso8601String();
 
   Map<String, dynamic> toMap() {
     return {

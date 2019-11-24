@@ -120,18 +120,6 @@ var dTFKMenu = [
     name: 'Thali',
     items: [
       MenuItem(
-        name: 'Little Hunger',
-        category: 'Thali',
-        isNonVeg: false,
-        price: 150.0,
-        inclusions: [
-          'Dal Makhani',
-          'Mix Veg',
-          '2 Tandoori Roti',
-          'Salad',
-        ],
-      ),
-      MenuItem(
         name: 'Medium Hunger',
         category: 'Thali',
         isNonVeg: false,
@@ -171,7 +159,7 @@ var dTFKMenu = [
         price: 300.0,
         inclusions: [
           'Dal Makhani',
-          'Shahi Paneer',
+          'Paneer Butter Masala',
           'Chana Masala',
           'Mix Veg',
           'Pulao',
@@ -229,6 +217,12 @@ var dTFKMenu = [
     name: 'All-Day Meals',
     items: [
       MenuItem(
+        name: 'Bheeja Kulcha (1pc)',
+        category: '',
+        isNonVeg: false,
+        price: 50,
+      ),
+      MenuItem(
         name: 'Bheeja Kulcha (2pc)',
         category: '',
         isNonVeg: false,
@@ -238,37 +232,37 @@ var dTFKMenu = [
         name: 'Nutri Kulcha',
         category: '',
         isNonVeg: false,
-        price: 100,
+        price: 80,
       ),
       MenuItem(
         name: 'Choley Bhature',
         category: '',
         isNonVeg: false,
-        price: 50,
+        price: 80,
       ),
       MenuItem(
         name: 'Aloo Naan Plate',
         category: '',
         isNonVeg: false,
-        price: 50,
+        price: 60,
       ),
       MenuItem(
         name: 'Gobi Naan Plate',
         category: '',
         isNonVeg: false,
-        price: 60,
+        price: 70,
       ),
       MenuItem(
         name: 'Mix Naan Plate',
         category: '',
         isNonVeg: false,
-        price: 60,
+        price: 70,
       ),
       MenuItem(
         name: 'Paneer Naan Plate',
         category: '',
         isNonVeg: false,
-        price: 70,
+        price: 80,
       ),
       MenuItem(
         name: 'Extra Pav',
@@ -578,11 +572,11 @@ var dTFKMenu = [
         types: [
           MenuItemType(
             name: 'Half',
-            price: 140.0,
+            price: 160.0,
           ),
           MenuItemType(
             name: 'Full',
-            price: 230.0,
+            price: 250.0,
           ),
         ],
       ),
@@ -608,11 +602,11 @@ var dTFKMenu = [
         types: [
           MenuItemType(
             name: 'Half',
-            price: 140.0,
+            price: 160.0,
           ),
           MenuItemType(
             name: 'Full',
-            price: 230.0,
+            price: 250.0,
           ),
         ],
       ),
@@ -653,21 +647,6 @@ var dTFKMenu = [
       ),
       MenuItem(
         name: 'Paneer Tikka',
-        category: '',
-        isNonVeg: false,
-        types: [
-          MenuItemType(
-            name: 'Half',
-            price: 100.0,
-          ),
-          MenuItemType(
-            name: 'Full',
-            price: 180.0,
-          ),
-        ],
-      ),
-      MenuItem(
-        name: 'Mushroom & Veg Tikka',
         category: '',
         isNonVeg: false,
         types: [
@@ -756,11 +735,11 @@ var dTFKMenu = [
         types: [
           MenuItemType(
             name: 'Small',
-            price: 90.0,
+            price: 100.0,
           ),
           MenuItemType(
             name: 'Large',
-            price: 150.0,
+            price: 160.0,
           ),
         ],
       ),
@@ -879,6 +858,12 @@ var dTFKMenu = [
         isNonVeg: false,
         price: 30.0,
       ),
+      MenuItem(
+        name: 'Paneer Naan Gravy',
+        category: '',
+        isNonVeg: false,
+        price: 90.0,
+      ),
     ],
   ),
   MenuItemCategory(
@@ -911,7 +896,7 @@ var dTFKMenu = [
         name: 'Mix Veg',
         category: 'Raita',
         isNonVeg: false,
-        price: 70.0,
+        price: 60.0,
       ),
       MenuItem(
         name: 'Boondi',

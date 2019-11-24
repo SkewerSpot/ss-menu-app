@@ -11,13 +11,13 @@ var dSSMenu = [
         name: 'Nutri Kulcha',
         category: '',
         isNonVeg: false,
-        price: 99,
+        price: 80,
       ),
       MenuItem(
         name: 'Nutri Rice',
         category: '',
         isNonVeg: false,
-        price: 99,
+        price: 100,
       ),
       MenuItem(
         name: 'Masala Idli',
@@ -38,12 +38,6 @@ var dSSMenu = [
         price: 90,
       ),
       MenuItem(
-        name: 'Chinese Idli',
-        category: '',
-        isNonVeg: false,
-        price: 140,
-      ),
-      MenuItem(
         name: 'Cheesy Grilled S/W [4pc]',
         category: '',
         isNonVeg: false,
@@ -59,31 +53,31 @@ var dSSMenu = [
         name: 'Choley Bhature',
         category: '',
         isNonVeg: false,
-        price: 50,
+        price: 80,
       ),
       MenuItem(
         name: 'Aloo Naan Plate',
         category: '',
         isNonVeg: false,
-        price: 50,
+        price: 60,
       ),
       MenuItem(
         name: 'Gobi Naan Plate',
         category: '',
         isNonVeg: false,
-        price: 60,
+        price: 70,
       ),
       MenuItem(
         name: 'Mix Naan Plate',
         category: '',
         isNonVeg: false,
-        price: 60,
+        price: 70,
       ),
       MenuItem(
         name: 'Paneer Naan Plate',
         category: '',
         isNonVeg: false,
-        price: 70,
+        price: 80,
       ),
       MenuItem(
         name: 'Extra Pav',
@@ -236,6 +230,7 @@ var dSSMenu = [
           'Blueberry Syrup',
           'Strawberry Syrup',
           'Strawberry Chocolate',
+          'Maple',
         ],
         toppings: [
           'Almonds',
@@ -314,19 +309,19 @@ var dSSMenu = [
         name: 'Veggie Delight',
         category: 'Wrap',
         isNonVeg: false,
-        price: 90,
+        price: 100,
       ),
       MenuItem(
         name: 'Paneer Tikka',
         category: 'Wrap',
         isNonVeg: false,
-        price: 120,
+        price: 140,
       ),
       MenuItem(
         name: 'Chilly Paneer',
         category: 'Wrap',
         isNonVeg: false,
-        price: 140,
+        price: 150,
       ),
     ],
   ),
@@ -369,7 +364,7 @@ var dSSMenu = [
         types: [
           MenuItemType(
             name: 'Regular',
-            price: 100,
+            price: 90,
           ),
         ],
         syrups: [
@@ -395,7 +390,7 @@ var dSSMenu = [
         price: 240,
         inclusions: [
           'Red/White Sauce Pasta',
-          'Garlic Bread (3pc)',
+          'Brownie (small)',
           'Coke',
         ],
       ),
@@ -403,11 +398,11 @@ var dSSMenu = [
         name: 'Wrap Meal',
         category: 'Combo',
         isNonVeg: false,
-        price: 200,
+        price: 250,
         inclusions: [
           'Paneer Tikka Wrap',
           'Potato Twisters',
-          'Coke',
+          'Cappuccino',
         ],
       ),
       MenuItem(
@@ -458,11 +453,11 @@ var dSSMenu = [
         name: 'Vada Pav & Fries',
         category: 'Combo',
         isNonVeg: false,
-        price: 160,
+        price: 210,
         inclusions: [
           'Nutri Kulcha (2pc)',
           'Regular Stick Waffle',
-          'Coke',
+          'Cappuccino',
         ],
       ),
       MenuItem(
@@ -491,7 +486,7 @@ var dSSMenu = [
         name: 'Waffle & Vada Pav',
         category: 'Combo',
         isNonVeg: false,
-        price: 200,
+        price: 230,
         inclusions: [
           'Day and Night Classic Waffle',
           'Vada Pav (set of 2)',
@@ -525,11 +520,11 @@ var dSSMenu = [
         types: [
           MenuItemType(
             name: 'Small',
-            price: 90.0,
+            price: 100.0,
           ),
           MenuItemType(
             name: 'Large',
-            price: 150.0,
+            price: 160.0,
           ),
         ],
       ),
@@ -537,7 +532,7 @@ var dSSMenu = [
         name: 'Ice Cream Scoop',
         category: '',
         isNonVeg: false,
-        price: 30,
+        price: 40,
       ),
     ],
   ),
